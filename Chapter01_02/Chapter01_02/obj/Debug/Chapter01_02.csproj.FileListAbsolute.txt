@@ -1,0 +1,6 @@
+C:\Users\Mirim\Documents\Yebon\CSharp\Chapter01_02\Chapter01_02\bin\Debug\Chapter01_02.exe.config
+C:\Users\Mirim\Documents\Yebon\CSharp\Chapter01_02\Chapter01_02\bin\Debug\Chapter01_02.exe
+C:\Users\Mirim\Documents\Yebon\CSharp\Chapter01_02\Chapter01_02\bin\Debug\Chapter01_02.pdb
+C:\Users\Mirim\Documents\Yebon\CSharp\Chapter01_02\Chapter01_02\obj\Debug\Chapter01_02.exe
+C:\Users\Mirim\Documents\Yebon\CSharp\Chapter01_02\Chapter01_02\obj\Debug\Chapter01_02.pdb
+C:\Users\Mirim\Documents\Yebon\CSharp\Chapter01_02\Chapter01_02\obj\Debug\Chapter01_02.csprojResolveAssemblyReference.cache
