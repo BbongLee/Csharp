@@ -1,0 +1,50 @@
+﻿@using NetMVC01.Models
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        Hello, my First ASP.NET!!!!MVC!!!!
+    </div>
+    <table>
+        <tr>
+            <td>회원가입 링크</td>
+            <td>@Html.ActionLink("회원가입","Join")</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>이름</td>
+            <td>이메일</td>
+        </tr>
+        @foreach (CUser iter in ViewBag.theUsers)
+        {
+            <tr>
+                <td>@iter.theID</td>
+                <td>@iter.theName</td>
+                <td>@iter.theEMail</td>
+            </tr> 
+        }
+    </table>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    { 
+        <p>ID : <input type="text" name="aID" id="ID" /></p>
+        <p>PW : <input type="password" name="aPW" id="PW" /></p>
+        
+        <input type="submit" value="로그인" />
+    }
+    @if (ViewBag.bFail == 1)
+    { 
+        <p>로그인 싱패에여 졸리거든여</p>
+    }
+</body>
+</html>

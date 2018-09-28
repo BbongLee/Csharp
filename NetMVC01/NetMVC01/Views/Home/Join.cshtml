@@ -1,0 +1,59 @@
+﻿@model NetMVC01.Models.CUser
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Join</title>
+</head>
+<body>
+    <div>
+        <h2><a href="@Url.Action("Index","Home")"><img src="../images/back.png" /></a></h2>
+    </div>
+
+    @if (ViewBag.bFail == 1)
+    { 
+    <p>중복된 아이디가 있습니다.</p>
+    }
+
+    @*<a href="@Url.Action("","")">Home</a>*@
+
+    @using (Html.BeginForm("Join", "Home"))
+    {
+        @Html.ValidationSummary();
+        <table>
+            <tr>
+                <td>가입항목</td>
+                <td>내용</td>
+            </tr>
+            <tr>
+                <td>아이디</td>
+                <td>@Html.TextBoxFor(x => x.theID, new { style = "width : 150px;" })</td>
+            </tr>
+            <tr>
+                <td>암호</td>
+                <td>@Html.TextBoxFor(x => x.thePW, new { style = "width:150px;", @type = "password" })</td>
+            </tr>
+            <tr>
+                <td>이름</td>
+                <td>@Html.TextBoxFor(x => x.theName, new { style = "width:150px;" })</td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td>@Html.TextBoxFor(x => x.theEMail, new { style = "width:150px;" })</td>
+            </tr>
+            <tr>
+                <td>이메일수신동의</td>
+                <td>@Html.CheckBoxFor(x => x.bSubscription, new { style = "width:150px;" })</td>
+            </tr>
+
+        </table>
+        <input type="submit" value="가입하기" />
+    }
+</body>
+</html>
